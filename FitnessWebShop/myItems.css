@@ -1,0 +1,38 @@
+
+  :root {
+    --primaryColor: #f09d51;
+    --mainWhite: #fff;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+  }
+  body {
+    color: var(--mainBlack);
+    background: var(--mainGrey);
+    font-family: "Lato", sans-serif;
+  }
+  
+.proVideo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 1000px;
+    height: 600px;
+    margin: auto;
+    padding: 20px;
+}
+.textBoxPayment{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 20px;
+}
+.paymentSuccess{
+text-align: center;
+font-size: 20px;
+font-weight: 500;
+color: var(--mainBlack);
+border-radius: 10px;
+border: var(--mainBlack) solid 10px;
+}

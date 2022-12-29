@@ -1,0 +1,82 @@
+{
+  "root": {
+    "id": "2feb4b2a-8e32-4294-a32d-82855c965b7b",
+    "groups": [
+      "admin"
+    ],
+    "username": "root",
+    "password": "55ea6cbb4ad36f3b167acd8e41b91923fdb53f6ff59c845dd322a2a3d754a238"
+  },
+  "user": {
+    "id": "264c2fc7-4e06-4b78-9271-94cdcbee9fe9",
+    "groups": [],
+    "username": "user",
+    "password": "652b88a1eae03c4e05c16fb57a896657c2e3f8234b9aa9addab7fb951c2abadf"
+  },
+  "majdy": {
+    "id": "9473a54f-d3a3-4e5f-b002-55854e27e60e",
+    "groups": [],
+    "username": "majdy",
+    "password": "458569cda74d106c6d9e8899747ebea212660afc69f0a09253b5191ddac9ad6d"
+  },
+  "majdy123": {
+    "id": "422d83f4-e102-4c54-be3c-48027a6114f4",
+    "groups": [],
+    "username": "majdy123",
+    "password": "385fb51b0b56a9d9a13c80995a684ede891212eb48f3ef122107d6b5a2d1f3e5"
+  },
+  "majdy1234": {
+    "id": "4075ff9d-24c8-4192-bddb-cdb1e7e857fc",
+    "groups": [],
+    "username": "majdy1234",
+    "password": "682e94e02314b115611a5ba9e18bf8bf84a38562471429df8389c65244d33c4b"
+  },
+  "majdy111": {
+    "id": "00e79371-70cf-4405-8886-cc68523573be",
+    "groups": [],
+    "username": "majdy111",
+    "password": "95d6f2255ae9a623afa2170abf7890a98a2f5659ce3287040244c3864ccf77aa"
+  },
+  "majdy11100": {
+    "id": "ca4c992e-5565-4df3-96c2-5ad645ebfd0e",
+    "groups": [],
+    "username": "majdy11100",
+    "password": "ef1a7b3bd3f7d8ceb0c2abd1d313dd2100d1a0bf0a9adf1902707175c734621f"
+  },
+  "majdy1111": {
+    "id": "34a65697-6217-434e-9c9e-e127b95fbeaf",
+    "groups": [],
+    "username": "majdy1111",
+    "password": "76c004d2d31c3630893912162384320b157ebd626b10af4f170ac1d6157a2777"
+  },
+  "andi": {
+    "id": "a12f4114-2a2d-41f8-87c2-54f2bc2cc24f",
+    "groups": [],
+    "username": "andi",
+    "password": "dc22a00ee7157c4e9d053bb3e91f68ee56542928f1bae89f4947f39ff145f1fd"
+  },
+  "majdy0000": {
+    "id": "f79bc516-4edb-4e79-9e99-3d5ebc339fa5",
+    "groups": [],
+    "username": "majdy0000",
+    "password": "1d55a491d2baca761f2552da37ed73ad9e22e9a67d75e7862c145bf06e9dc8d8"
+  },
+  "markus": {
+    "id": "9c0e682e-7a27-4b96-ace6-6bec1e3f8413",
+    "groups": [],
+    "username": "markus",
+    "password": "e760a42247cfc042d829acd9aca2ddf1a0a3e05b19229ae4bd5efc6848cf0f1f"
+  },
+  "radi": {
+    "id": "e1781bfc-974d-4eeb-aa15-3816b86b8252",
+    "groups": [],
+    "username": "radi",
+    "password": "e8d1e3e8a3ae922aa17a8074362d575caadef82d7353df3e465b6d8d2a34282c"
+  },
+  "marwa": {
+    "id": "536f1fa0-2d35-4468-b6d8-3f75d2a64549",
+    "groups": [],
+    "username": "marwa",
+    "password": "0861ab675c000d434dd91a4c444c9cee44f1f38a176a7cb5212a8fa0823147f0"
+  }
+}

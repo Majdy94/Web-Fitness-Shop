@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      const userName = "{{session?.username ?? ''}}" || null;
+    </script>
+    <script src="script.js" defer></script>
+    <title>Calisthenics</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+      />
+      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- start nav bar -->
+      <nav class="navbar">
+        <a href="./index.html" class="logo">Calisthenics<span>FAQs</span></a>
+        <a href="#" class="toggle-spans">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+      <div class="navbar-buttons">  
+        <ul>
+          <li><a href="index.html">Programms</a></li>
+          <li><a href="youtube.html">Free Tutorials!</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+          {{
+            if (session) {
+              return `
+                <li><a href="/?logout" class="logout">logout</a></li>
+                <li>${session?.username ?? ''}</li>
+              `;
+            } else {
+              return `
+              <li><a href="/login.html">login</a></li>
+              `;
+            }
+          }}
+          <li><a href="myItems.html">my Items</a></li>
+                        
+            <div class="navbar-center">
+                <div class="cart-btn">
+                    <span class="nav-icon">
+                        <div class="cart-items">0</div>
+                        <i class="fas fa-cart-plus" style="font-size: 2rem;"></i>
+                    </span>
+                </div>
+            </div>
+        </ul>
+      </div>
+      </nav>
+      <!-- end of nav -->
+      <!-- hero -->
+      <header class="hero">
+        <div class="banner">
+          <h1 class="banner-title">Calisthenics programms</h1>
+          <a class="banner-btn" href="#a1">shop now</a>
+        </div>
+      </header>
+      <!-- end of hero -->
+      <!-- products -->
+      <div class="backround-images">
+        <div class="backroundDes">
+          <p>You're Here to Build The <span>Strongest</span> Body Ever</p>
+        </div>
+      </div>
+      <div class="main">
+        <h2>
+          Get Your Perfect <span>Calisthenics</span> Program <br />
+          To Your Right <span>Goal</span>
+        </h2>
+        <p class="desc">
+          Project Calisthenics is a modular program designed for all fitness
+          levels and abilities.
+          <br />
+          Most movements can be done with no equipment, however a resistance
+          band is highly recommended.
+          <br />
+          The only weight you need is your own bodyweight!
+          <br />
+          <br />
+          Whether you're an absolute beginner, or more experienced athlete, this
+          programm will challenge you in new ways.
+        </p>
+      <section id="a1" class="products">
+        <div class="section-title">
+              <h2>OUR PROGRAMS</h2>
+            </div>
+          <div class="products-center">
+              <!-- single product -->
+                <!-- end of single product -->
+              </div>
+            </section>
+            <!-- end of products -->
+            <!-- cart  -->
+            <div class="cart-overlay">
+              <div class="cart">
+                <span class="close-cart">
+                  <i class="fas fa-window-close"></i>
+                </span>
+                <h2>your cart</h2>
+                <div class="cart-content">
+                  <!-- we will create the items here with JS when 
+                    clicking on the item to put him in the cart -->
+                  </div>
+                  <!-- end of cart item -->
+                  <div class="cart-footer">
+                    <h3>your total:<span class="yourTotal" style="display: inline-block;">$</span><span class="cart-total">0</span></h3>
+                      <select class="exchange-box">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                      </select>
+                    <button class="clear-cart banner-btn">clear cart</button>
+                   <!-- Credit Cart method end -->
+                  <div class="preis-box">
+                    <form action="/credit" method="POST">
+                      <input type="submit" name="button" value="pay now!">
+                        <div class="price">im not null!</div>
+                        <div class="details"></div>
+                   </form>
+                  </div>
+                 <!-- Credit Cart method end-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of cart -->
+            <!-- this is the main div that includes all articels and sections -->
+          </div>
+          <br />
+          </div>
+        </article>
+      </div>
+    </div>
+    <!-- start of the footer -->
+    <div class="footer-box">
+      <footer>
+        <div class="icons">
+          <a href="https://www.facebook.com/Majdy.Laba/" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+
+          <a href="https://www.instagram.com/majdylaba/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCFqc_TuWJoXpmpDyHLjSVTA"
+            target="_blank"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Home</a></li>
+          <li class="list-inline-item"><a href="#">Services</a></li>
+          <li class="list-inline-item"><a href="/about.html">About</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Calisthenics FAQs © 2022</p>
+      </footer>
+    </div>
+        <!-- end of the footer -->
+  </body>
+</html>

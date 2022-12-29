@@ -1,0 +1,30 @@
+{
+  "crypto": {
+    "hash": "sha256",
+    "salt": "1b3da00f-bf0d-4a23-bd74-418e31168ca5"
+  },
+  "server": {
+    "port": 80
+  },
+  "session": {
+    "duration": 15,
+    "homepage": "/index.html",
+    "signs": 64
+  },
+  "snippets": [
+    "html",
+    "htm"
+  ],
+  "users": {
+    "limits": {
+      "username": {
+        "min": 3,
+        "max": 32
+      },
+      "password": {
+        "min": 3,
+        "max": 64
+      }
+    }
+  }
+}

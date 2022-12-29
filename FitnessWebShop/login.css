@@ -1,0 +1,223 @@
+/* styling the login register site*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    --gelb: #dbb83a;
+    --bold-font-color: #454545;
+    --font-color: #5a5a5a;
+    --white: #f5f5f5;
+    --blue: #2664ad;
+}
+
+ body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--gelb) ;
+ }
+ html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+ }
+
+ .container {
+    position: relative;
+    max-width:43rem ;
+    width: 100%;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    /* overflow: hidden; */
+ }
+ .container .forms {
+    display: flex;
+    align-items: center;
+    height: 44rem;
+    width: 200%;
+    transition: height 0.2s ease;
+ }
+ .container .form-login {
+    padding: 3rem;
+    width: 50%;
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+ }
+ .container .form-register {
+   margin: auto auto;
+   padding: 3rem;
+   width: 100%;
+   background-color: #fff;
+   transition: margin-left 0.18s ease;
+}
+ .container.active .forms{
+    height: 60rem;
+ }
+ .container.active .form-login, .form-register{
+   margin-left: -50%;
+ }
+ .container .form-login .title{
+    font-size: 2.7rem;
+    position: relative;
+    font-weight: 600;
+ }
+ .container .form-register .title{
+   font-size: 2.7rem;
+   position: relative;
+   font-weight: 600;
+}
+.form-login .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 3rem;
+    background-color: var(--gelb);
+    border-radius: 2.5rem;
+ }
+ .form-register  .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 3rem;
+    background-color: var(--gelb);
+    border-radius: 2.5rem;
+ }
+ .form-login .input-box{
+    position: relative;
+    height: 5rem;
+    width: 100%;
+    margin-top: 3rem;
+ }
+ .form-register .input-box{
+    position: relative;
+    height: 5rem;
+    width: 100%;
+    margin-top: 3rem;
+ }
+ .input-box input{
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    border-bottom: 0.2rem solid #ccc;
+    font-size: 1.6rem;
+    transition: all 0.2s ease;
+ }
+ .input-box input:is(:focus, :valid){
+    border-bottom-color: var(--gelb);
+ }
+ .input-box i {
+    position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   color: #999;
+   font-size: 2.6rem;
+ }
+ .input-box input:is(:focus, :valid) ~ i{
+    color: var(--gelb);
+ }
+ .input-box .uil-envelope{
+    left: 0;
+ }
+ .input-box .uil-user{
+    left: 0;
+ }
+ .input-box i.icon{
+    left: 0;
+
+ }
+ .input-box i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 1rem;
+ }
+.form-login .checkbox-text {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.form-register .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+.checkbox-content input {
+    margin: 0 0.8rem -0.2rem 0.4rem;
+    accent-color: var(--gelb);
+}
+
+.form-login a {
+    text-decoration: none;
+}
+.form-register a {
+    text-decoration: none;
+}
+.form-register a.text {
+    color: var(--gelb);
+    text-decoration: none;
+}
+.form-login a:hover {
+    text-decoration: underline;
+}
+.form-register a:hover {
+    text-decoration: underline;
+}
+.form-login .text {
+    color: #333;
+    font-size: 1.4rem;
+}
+.form-register .text {
+   color: #333;
+   font-size: 1.4rem;
+}
+.form-login .signup-link {
+    color: var(--gelb);
+    font-size: 1.4rem;
+}
+
+.form-login .button{
+    margin-top: 3.5rem;
+}
+.form-register .button{
+    margin-top: 3.5rem;
+}
+
+.form-login .button input{
+border: none;
+color: #fff;
+letter-spacing: 0.1rem;
+background-color: var(--gelb);
+border-radius: 0.6rem;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+.form-register .button input{
+border: none;
+color: #fff;
+letter-spacing: 0.1rem;
+background-color: var(--gelb);
+border-radius: 0.6rem;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+.button input:hover{
+    background-color:var(--gelb);
+}
+.form-login .login-signup {
+margin-top: 3rem;
+text-align: center;
+}
+.memberBox{
+   display: flex;
+   justify-content: space-between;
+   flex-direction: row;
+}
