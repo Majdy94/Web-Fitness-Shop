@@ -7,10 +7,10 @@
 
 ### what should be Installed?
 1. npm `install node`
-2. run `node server.js`
-3. npm install stripe --save // Credit Cart API Package
-4. npm install nodemailer // (form the contact site)
-5. run localhost on port 80
+2. npm install stripe --save // Credit Cart API Package
+3. npm install nodemailer // (form the contact site)
+4. run `node server.js`
+5. run localhost on port 80 on browser
 
 
 ### To buy a programm here are the test credit cart access data:
