@@ -1,6 +1,6 @@
 ## Calisthenics Shop.
 
->*it's a simple workout Webpage by a beginner Web Developer.*
+>*it's a simple workout Webpage by Majdy Lababidi.*
 
 ## *Requirements*
 **Node 12 or higher.**
