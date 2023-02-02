@@ -1,0 +1,22 @@
+{
+ "block": [
+  "/accesslist.json",
+  "/config.json",
+  "helpers.js",
+  "/mimetypes.json",
+  "/logo",
+  "/docs",
+  "/server.js",
+  "/templates/body.html",
+  "/templates/footer.html",
+  "/templates/head.html",
+  "/templates/nav.html"
+ ],
+ "login": [
+  "/src/index.html",
+  "/src/style.css",
+  "/src/script.js",
+  "/src/contact.html",
+  "/src/about.html"
+ ]
+}

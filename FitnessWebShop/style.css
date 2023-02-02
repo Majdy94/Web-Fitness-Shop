@@ -1,0 +1,1002 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+* {
+  /* -webkit-box-sizing: border-box;
+ -moz-box-sizing: border-box; */
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-family:open, sans-serif; */
+  --gelb: #dbb83a;
+  --bold-font-color: #454545;
+  --font-color: #5a5a5a;
+  --white: #f5f5f5;
+  --blue: #2664ad;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+:root {
+  --primaryColor: #f09d51;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--mainGrey);
+  /* background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(203, 194, 176, 1) 100%); */
+}
+/******** // animation backround  *******/
+
+.backround-images {
+height: 100vh;
+ width: 100%;
+ background-image: url(./fotos/hamstring.jpg);
+ background-size: cover;
+ background-position: center;
+ background-repeat: no-repeat;
+ transition: 5s;
+ animation-name: animate;
+ animation-duration: 30s;
+ animation-direction: alternate-reverse;
+ animation-fill-mode: forwards;
+ animation-iteration-count: infinite;
+ animation-play-state: running;
+ animation-timing-function: ease-in-out;
+}
+@keyframes animate {
+  0% {
+    background-image: url(/fotos/plancheLean.jpg);
+  }
+  25% {
+    background-image: url(/fotos/Hollowback.jpg);
+  }
+  50% {
+    background-image: url(/fotos/Lsit.jpg);
+  }
+  75% {
+    background-image: url(/fotos/backlever.jpg);
+  }
+  100% {
+    background-image: url(/fotos/hamstringSmall.jpg);
+  }
+ 
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:var(--gelb);
+  color: var(--font-color);
+  margin: 1rem;
+  padding: 1rem;
+  filter: drop-shadow(0 0 0.75rem rgb(65, 40, 45));
+  border-radius: 1rem;
+}
+.navbar-buttons ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navbar-buttons li {
+  list-style: none;
+}
+.navbar-buttons li a {
+  margin: 1rem;
+  text-decoration: none;
+  color: var(--font-color);
+  display: block;
+  font-size: 2.5rem;
+
+}
+.navbar li a:hover {
+  background: cornflowerblue;
+  border-radius: 0.5rem;
+}
+.toggle-spans {
+  position: absolute;
+  top: 2.5rem;
+  right: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-spans .bar {
+  height: 0.3rem;
+  width: 100%;
+  background-color: white;
+  border-radius: 1rem;
+
+}
+@media (max-width: 60rem){
+  .toggle-spans {
+    display: flex;
+
+  }
+  .navbar-buttons {
+    display: none;
+    width: 100%;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-buttons ul {
+    width: 100%;
+    flex-direction: column;  
+  }
+
+  .navbar-buttons li {
+    justify-content: center;
+    text-align: center;
+  }
+  .navbar-buttons.active {
+    display: flex;
+  }
+}
+.fa-facebook:hover {
+  color: cornflowerblue;
+}
+.fa-instagram:hover {
+  color: rgb(237, 230, 100);
+}
+.fa-youtube:hover {
+  color: rgb(237, 146, 100);
+}
+.navbar .logo {
+  margin: 0.6rem;
+  font-size: 4rem;
+  cursor: pointer;
+  color: var(--mainBlack);
+  font-weight: 500;
+  text-decoration: none;
+  font-style:italic ;
+}
+/* navi*/
+@media (max-width: 300px) {
+  .navbar .toggle-button {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    transition: top 1s ease;
+    display: none;
+  }
+  .navbar .navbar-buttons  {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  .navbar .toggle-button {
+    display: block;
+  }
+  .navbar li a:hover {
+    background: none;
+    color: rgb(237, 146, 100);
+    font-size: 1.6rem;
+  }
+}
+
+
+/* --------------- Navbar ---------------- */
+.navbarCart {
+  position: sticky;
+  top: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: rgb(231, 226, 221);
+  z-index: 1;
+}
+.navbar-center {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+.cart-items {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--primaryColor);
+  padding: 0 5px;
+  border-radius: 30%;
+  color: var(--mainWhite);
+}
+/* --------------- End of Navbar ---------------- */
+/* --------------- Hero ---------------- */
+.hero {
+  min-height: calc(126vh - 60px);
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 2px solid var(--gelb);
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background: round;
+  background-image: url(/logo/07b3f45e-d13c-4f6c-9f8b-d032c38dd1ee.JPG);
+}
+@media (max-width: 115rem){
+  .hero {
+    min-height: calc(94vh - 60px);
+    margin: 0rem;
+
+  }
+}
+
+.banner {
+  position: absolute;
+  top: 66%;
+  text-align: center;
+  background:var(--gelb);
+  display: inline-block;
+  padding: 1rem;
+}
+.banner-title {
+  font-size: 3.4rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 3rem;
+}
+.banner-btn {
+  text-decoration:none;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  letter-spacing: var(--mainSpacing);
+  font-size: 2rem;
+  background: var(--primaryColor);
+  color: var(--mainBlack);
+  border: 1px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  cursor: pointer;
+}
+.banner-btn:hover {
+  background: transparent;
+  color: var(--primaryColor);
+}
+/* --------------- End of Hero ---------------- */
+/* --------------- Products ---------------- */
+
+.products {
+  padding: 4rem 0;
+}
+.section-title h2 {
+  color: var(--gelb);
+  text-align: center;
+  font-size: 3.5rem;
+  border: 0.3rem solid var(--mainBlack);
+  filter: drop-shadow(0 0 0.75rem rgb(65, 40, 45));
+  border-radius: 2rem;
+  margin-bottom: 5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.products-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+}
+.bag-btn {
+  position: absolute;
+  top: 70%;
+  right: 0;
+  background: var(--gelb);
+  border: none;
+  text-transform: uppercase;
+  padding: 0.5rem 0.75rem;
+  letter-spacing: var(--mainSpacing);
+  font-weight: bold;
+  transition: var(--mainTransition);
+  transform: translateX(101%);
+  cursor: pointer;
+}
+.bag-btn:hover {
+  color: var(--mainWhite);
+}
+.fa-shopping-cart {
+  margin-right: 0.5rem;
+}
+.img-container:hover .bag-btn {
+  transform: translateX(0);
+}
+.product-img {
+  display: block;
+  width: 100%;
+  min-height: 12rem;
+  transition: var(--mainTransition);
+}
+.img-container:hover .product-img {
+  opacity: 0.5;
+}
+
+.product h3 {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+
+.product h4 {
+  margin-top: 0.7rem;
+  letter-spacing: var(--mainSpacing);
+  color: var(--primaryColor);
+  text-align: center;
+  font-size: 3rem;
+}
+
+/* ---------------End of Products ---------------- */
+/* --------------- Cart ---------------- */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: var(--mainTransition);
+  background: rgb(240, 157, 81, 0.5);
+  z-index: 2;
+  visibility: hidden;
+}
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 3;
+  background: rgb(231, 226, 221);
+  padding: 1.5rem;
+  transition: var(--mainTransition);
+  transform: translateX(100%);
+}
+.showCart {
+  transform: translateX(0);
+}
+.transparentBcg {
+  visibility: visible;
+}
+@media screen and (min-width: 768px) {
+  .cart {
+    width: 30vw;
+    min-width: 450px;
+  }
+
+}
+
+.close-cart {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.cart h2 {
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 2rem;
+}
+/*---------- Cart Item -------------------- */
+.cart-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.cart-item img {
+  width: 75px;
+  height: 75px;
+}
+.cart-item h4 {
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.cart-item h5 {
+  margin: 0.5rem 0;
+  letter-spacing: var(--mainSpacing);
+}
+.item-amount {
+  text-align: center;
+}
+.remove-item {
+  color: grey;
+  cursor: pointer;
+}
+.fa-chevron-up,
+.fa-chevron-down {
+  color: var(--primaryColor);
+  cursor: pointer;
+}
+/*---------- End of Cart Item -------------------- */
+
+.cart-footer {
+  margin-top: 2rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+.cart-footer h3 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+/* --------------- End of Cart ---------------- */
+
+ header {
+  background-color: white;
+  filter: drop-shadow(0 0 0.75rem #454545);
+}
+/* remove this!  */
+.navbar-header {
+  position: relative;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-style: italic;
+  display: flex;
+  padding-top: 2rem;
+  margin: 1rem;
+}
+.logo span {
+  color: rgb(161, 143, 163);
+  font-size: 2rem;
+} 
+ /* hovering the Logo Button   */
+ .logo:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  color: var(--mainWhite);
+  font-size: 5rem;
+}
+
+.backroundDes {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.backroundDes,
+p span {
+  color: var(--gelb);
+  font-size: 4rem;
+  font-style: italic;
+  font-weight: 600;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.backround-images span {
+  color: var(--white);
+  text-shadow: -1px 0 black, 0 1px black, -5px -2px black, 0 -1px black;
+  font-style:oblique;
+}
+
+.main > h2 {
+  color: var(--gelb);
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-style: oblique;
+}
+.main > h2 > span {
+  color: var(--mainBlack);
+  font-size: 1.5rem;
+} */
+
+/* filter: blur(4px);  تغبيش الشاشة  */
+
+ .main > p {
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem 1rem;
+  font-style: italic;
+  color: black;
+}
+
+.logo-img {
+  background-color: #eee;
+  margin-left: 20%;
+  border: solid #444 0.2rem;
+}
+#main-article {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--main-color);
+  color: var(--font-color);
+  font-size: 2rem;
+}
+img {
+  margin: 0.5rem;
+  border-radius: 3rem;
+  height: 32rem;
+}
+img:hover {
+  cursor: pointer;
+  transition: 0.5s;
+}
+.main h3 {
+  margin: 1rem;
+  text-align: center;
+  font-size: 3rem;
+}
+.desc{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.sec-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sec-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sec-three {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+#main-article > h2 {
+  background-color: var(--gelb);
+  width: 30%;
+  text-align: center;
+  font-style: oblique;
+  margin: auto auto;
+  color: floralwhite;
+  font-size: 2rem;
+  border-radius: 0.8rem;
+  border: solid 0.1rem black;
+} 
+/*  the section of every Pic*/
+ .first,
+.second,
+.third {
+  margin: 1rem;
+  font-size: 1.5rem;
+} 
+/*designing the prise*/
+ .firstProgramm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto auto;
+} 
+ .preis-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+} 
+.buyButton {
+  text-align: center;
+  height: fit-content;
+  font-size: 3rem;
+}
+.buyButton > span {
+  text-decoration: line-through;
+}
+
+/*Desinging the Footer */
+
+.icons i {
+  display: inline-block;
+  justify-content: center;
+  flex-direction: row;
+  font-size: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem 1rem;
+}
+main {
+  overflow: auto;
+}
+.footer-box {
+  position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   padding: 1rem;
+   text-align: center;
+  background: linear-gradient(0deg, rgb(161 162 149) 0%, rgb(69 148 212) 100%);
+}
+
+.footer-box ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.footer-box li {
+  padding: 0 10px;
+}
+
+.footer-box ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-box ul a:hover {
+  opacity: 1;
+}
+
+.footer-box .icons {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.footer-box .icons > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-box .copyright {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--bold-font-color);
+  margin-bottom: 0;
+}
+/*
+Hier Sind Css Styles für das Kontaktformular
+*/
+.contact {
+  width: 80%;
+  height: fit-content;
+  margin: auto auto;
+}
+.h2-par {
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  text-align: center;
+  filter: drop-shadow(0 0 0.75rem rgb(65, 40, 45));
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: var(--gelb);
+}
+label {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+select,
+textarea,
+input[type="email"] {
+  font-size: 1.5rem;
+  width: 100%; /* Full width */
+  padding: 1rem; /* Some padding */
+  border: 0.1rem solid #ccc; /* Gray border */
+  border-radius: 0.4rem; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: var(--gelb);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color:transparent;
+  color: var(--mainBlack);
+  border: 0.2px solid var(--gelb);
+  transition: 1s;
+  opacity: 0.7;
+}
+
+/* Add a background color and some padding around the form */
+.container-cont {
+  margin: auto auto;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+.select-options {
+  /* font size bigger for choose options*/
+  font-size: 1.3rem;
+}
+.select-options:hover {
+  /* hovering the choose options*/
+  background-color: lightblue;
+}
+.country:hover {
+  background-color: lightblue;
+}
+
+/* styling the about us site*/
+/* .about-content-container {
+} */
+.about-h2 {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+}
+.about-h2 > span {
+  font-size: 2.2rem;
+  font-style: italic;
+  background-color: var(--gelb);
+  border-radius: 0.5rem;
+}
+.about-p {
+  padding: 0.4rem;
+  font-size: 2rem;
+  background-color: var(--gelb);
+}
+.first-article > h3 {
+  position: relative;
+  font-size: 2rem;
+  margin-left: 1rem;
+  padding-left: 2rem;
+  color: white;
+  background-color: black;
+  width: fit-content;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+/* make a line*/
+.first-article > h3::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  border: 0.2px solid black;
+  background-color: black;
+  z-index: 1;
+  left: 0;
+}
+.first-section-box {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+.first-sec-of-first-article {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  height: fit-content;
+  width: 90%;
+  font-size: 2.5rem;
+}
+
+.second-article > h3,
+.third-article > h3 {
+  display: inline-block;
+  position: relative;
+  font-size: 2rem;
+  padding-left: 2rem;
+  color: white;
+  font-style: italic;
+  margin-top: 0.5rem;
+  background-color: black;
+}
+.second-section-box {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.third-section-box {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.second-sec-of-sec-article {
+  display: flex;
+  flex: 3;
+  align-items: center;
+  font-size: 2.2rem;
+  margin-top: 1rem;
+  background-color: var(--gelb);
+}
+.second-article,
+.third-article {
+  position: relative;
+  margin: 1rem;
+}
+.third-sec-of-sec-article {
+  display: flex;
+  flex: 3;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 2.2rem;
+}
+.arrowButtonBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  font-size: 2rem;
+}
+.arrow{
+  color: var(--mainBlack);
+  display: flex;
+  justify-content: center;
+}
+
+.startButton {
+  background-color: #dbb83a;
+  text-decoration: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  right: 95rem;
+  bottom: 1rem;
+}
+/*Styling the FreeTutorials Page*/
+
+.h2-youtubePage {
+  margin: auto auto;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+.span-youtube-h2 {
+  font-size: 2rem;
+  color: var(--gelb);
+}
+.youtubeContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.videoTitleYoutube {
+  display: flex;
+  flex-wrap: wrap;
+  text-decoration: none;
+  align-items: center;
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--bold-font-color);
+}
+.videoTitleYoutube:hover {
+transition: 0.5s;
+  font-size: 3rem;
+  color: var(--gelb);
+}
+/* styling the Payment Site */
+
+dialog {
+  margin: auto;
+  box-shadow: inset 0 0 0.5rem black, 0 0 2.5rem black;
+  border-color: white;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+dialog::backdrop {
+  -webkit-backdrop-filter: blur(0.25rem);
+  backdrop-filter: blur(0.25rem);
+}
+
+dialog[open] {
+  animation: popin 0.4s;
+}
+
+@keyframes popin {
+  0% {
+    opacity: 0;
+    transform: scale(0.25);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+dialog.popout {
+  animation: popout 0.4s forwards;
+}
+
+@keyframes popout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+dialog h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin: 0.5rem;
+  padding: 0;
+}
+
+dialog p {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
