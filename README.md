@@ -6,9 +6,9 @@
 **Node 12 or higher.**
 
 ### what should be Installed?
-1. npm `install node`
-2. npm install stripe --save // Credit Card API Package
-3. npm install nodemailer // (form the contact site)
+1. `npm install node`
+2. `npm install stripe --save` // Credit Card API Package
+3. `npm install nodemailer` // (form the contact site)
 4. run `node server.js`
 5. run localhost on port 80 on browser
 
