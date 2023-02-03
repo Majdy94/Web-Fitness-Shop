@@ -109,7 +109,6 @@ class UI {
       <!-- single product -->
       <article class="product">
       <div class="img-container">
-      <h3 class="product-desc">${product.desc}</h3>
       <img src=${product.image} alt="product" class="product-img">
       <button class="bag-btn" data-id=${product.id}>
       <i class="fas fa-shopping-cart">Add to Cart</i>
@@ -117,6 +116,7 @@ class UI {
       </div>
       <h3>${product.title}</h3>
       <h4>${product.price}$</h4>
+      <h3 class="product-desc">${product.desc}</h3>
       </article>
       <!-- end of single product -->
       `;

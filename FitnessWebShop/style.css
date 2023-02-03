@@ -510,13 +510,13 @@ p span {
 .main > h2 {
   color: var(--gelb);
   margin-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   text-align: center;
   font-style: oblique;
 }
 .main > h2 > span {
   color: var(--mainBlack);
-  font-size: 1.5rem;
+  font-size: 4.5rem;
 } */
 
 /* filter: blur(4px);  تغبيش الشاشة  */
